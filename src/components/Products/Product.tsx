@@ -1,6 +1,6 @@
-import { Product } from '@/db'
+import { Product as TProduct } from '@/db'
 
-const Product = ({ product }: { product: Product }) => {
+const Product = ({ product }: { product: TProduct }) => {
   return (
     <div className='group relative'>
       <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>

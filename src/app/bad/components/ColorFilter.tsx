@@ -37,7 +37,7 @@ const ColorFilter = ({ onChangeAction } : ColorFilterProps) => {
       const filteredOptions = newOptions.join(",");
       optionSearchParams.set(
         optionNameLowerCase,
-        decodeURIComponent(filteredOptions)
+        filteredOptions
       );
     } else {
       const newOptions = color.filter((item) => item.toLowerCase() !== option.toLowerCase());
@@ -45,7 +45,7 @@ const ColorFilter = ({ onChangeAction } : ColorFilterProps) => {
       if (newOptions.length > 0) {
         optionSearchParams.set(
           optionNameLowerCase,
-          decodeURIComponent(filteredOptions)
+         filteredOptions
         );
       } else {
         optionSearchParams.delete(optionNameLowerCase);

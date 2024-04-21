@@ -26,6 +26,10 @@ const links = [{
 {
   name: 'SSR ⚡',
   route: '/ssr'
+},
+{
+  name: 'Streaming 🚀',
+  route: '/streaming'
 }]
 
 export default function RootLayout({

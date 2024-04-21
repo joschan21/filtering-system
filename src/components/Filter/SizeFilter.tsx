@@ -35,7 +35,7 @@ const SizeFilter = ({ onChangeAction }: SizeFilterProps) => {
         const filteredOptions = newOptions.join(",");
         optionSearchParams.set(
           optionNameLowerCase,
-          decodeURIComponent(filteredOptions)
+          filteredOptions
         );
       } else {
         const newOptions = size.filter((item) => item !== option);
@@ -43,7 +43,7 @@ const SizeFilter = ({ onChangeAction }: SizeFilterProps) => {
         if (newOptions.length > 0) {
           optionSearchParams.set(
             optionNameLowerCase,
-            decodeURIComponent(filteredOptions)
+            filteredOptions
           );
         } else {
           optionSearchParams.delete(optionNameLowerCase);

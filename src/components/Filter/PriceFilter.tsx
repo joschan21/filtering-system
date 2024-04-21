@@ -52,13 +52,13 @@ function PriceFilter({ onChangeAction }: PriceFilterProps) {
       const filteredOptions = [...range, "custom"].join(",");
       optionSearchParams.set(
         optionNameLowerCase,
-        decodeURIComponent(filteredOptions)
+        filteredOptions
       );
     } else {
       const filteredOptions = [...range, "raw"].join(",");
       optionSearchParams.set(
         optionNameLowerCase,
-        decodeURIComponent(filteredOptions)
+        filteredOptions
       );
     }
 

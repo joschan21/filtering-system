@@ -18,6 +18,7 @@ export const DEFAULT_FILTER_OPTIONS: ProductState = {
   size: ["L", "M", "S"],
   sort: "none",
 };
+
 function ProductsList() {
   const searchParams = useSearchParams();
 
@@ -53,12 +54,15 @@ function ProductsList() {
       return data;
     },
   });
+
   return (
     <ul className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       {products && products.length === 0 ? (
         <EmptyState />
       ) : products ? (
-        products.map((product) => <Product key={product.id} product={product.metadata!} />)
+        products.map((product) => (
+          <Product key={product.id} product={product.metadata!} />
+        ))
       ) : (
         new Array(12).fill(null).map((_, i) => <ProductSkeleton key={i} />)
       )}
